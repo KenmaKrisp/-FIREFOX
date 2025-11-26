@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LinkGuard настройки</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>LinkGuard</h1>
+        <p>Выберите уровень проверки ссылок.</p>
+      </header>
+      <section class="group" data-setting="mode">
+        <h2>Уровень проверки</h2>
+        <label class="mode-card">
+          <input type="radio" name="mode" value="links" />
+          <div>
+            <strong>Только внешние ссылки</strong>
+            <span>Показывать только для ссылок на другие сайты.</span>
+          </div>
+        </label>
+        <label class="mode-card">
+          <input type="radio" name="mode" value="all-links" />
+          <div>
+            <strong>Все ссылки</strong>
+            <span>Реагировать на любые http/https ссылки.</span>
+          </div>
+        </label>
+      </section>
+      <section class="group" data-setting="ui">
+        <h2>Вид панели</h2>
+        <label class="mode-card">
+          <input type="radio" name="ui" value="minimal" />
+          <div>
+            <strong>Минималистично</strong>
+            <span>Только статус и короткий комментарий.</span>
+          </div>
+        </label>
+        <label class="mode-card">
+          <input type="radio" name="ui" value="balanced" />
+          <div>
+            <strong>Стандартно</strong>
+            <span>Добавить детали анализа без шкалы.</span>
+          </div>
+        </label>
+        <label class="mode-card">
+          <input type="radio" name="ui" value="full" />
+          <div>
+            <strong>Полный</strong>
+            <span>Полная карточка со шкалой и действиями.</span>
+          </div>
+        </label>
+      </section>
+      <footer>
+        <span id="status">Загрузка…</span>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
+

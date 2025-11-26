@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "LinkGuard",
+  "version": "1.0.0",
+  "description": "Показывает уровень доверия к ссылкам при наведении курсора.",
+  "permissions": ["<all_urls>", "storage"],
+  "browser_action": {
+    "default_title": "LinkGuard",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "linkguard@example.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}
